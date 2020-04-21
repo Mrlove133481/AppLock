@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+def releaseTime() {
+    return new Date().format("yyMMdd", TimeZone.getTimeZone("UTC"))
+}
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "25.0.0"
+    defaultConfig {
+        applicationId "com.lzx.lock"
+        minSdkVersion 15
+        targetSdkVersion 29
+        versionCode 2
+        versionName "1.1"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            zipAlignEnabled true //Zipalign优化
+            shrinkResources false //移除无用的resource文件
+            minifyEnabled false  //混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "${variant.name}-${variant.versionName}.apk"
+        }
+    }
+
+    //忽略一些错误
+    lintOptions {
+        abortOnError true
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:25.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:design:25.0.0'
+    //数据库
+    implementation 'org.litepal.android:core:1.4.1'
+}
