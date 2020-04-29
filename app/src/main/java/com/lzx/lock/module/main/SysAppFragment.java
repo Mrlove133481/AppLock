@@ -2,9 +2,10 @@ package com.lzx.lock.module.main;
 
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.lzx.lock.R;
 import com.lzx.lock.adapter.MainAdapter;
