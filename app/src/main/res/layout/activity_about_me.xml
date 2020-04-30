@@ -7,7 +7,7 @@
 
     <include layout="@layout/layout_toolbar"/>
 
-    <com.lzx.lock.widget.CircleImageView
+    <com.mrlove.lock.widget.CircleImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"

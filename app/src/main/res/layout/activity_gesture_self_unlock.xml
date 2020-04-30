@@ -61,7 +61,7 @@
             android:textSize="14sp"/>
     </RelativeLayout>
 
-    <com.lzx.lock.widget.LockPatternView
+    <com.mrlove.lock.widget.LockPatternView
         android:id="@+id/unlock_lock_view"
         android:layout_width="290dp"
         android:layout_height="290dp"

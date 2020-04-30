@@ -8,7 +8,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
     defaultConfig {
-        applicationId "com.lzx.lock"
+        applicationId "com.mrlove.lock"
         minSdkVersion 29
         targetSdkVersion 29
         versionCode 2

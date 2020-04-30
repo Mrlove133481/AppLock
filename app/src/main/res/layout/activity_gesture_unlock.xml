@@ -33,7 +33,7 @@
         android:paddingRight="20dp"
         android:src="@drawable/ic_menu_small"/>
 
-    <com.lzx.lock.widget.LockPatternView
+    <com.mrlove.lock.widget.LockPatternView
         android:id="@+id/unlock_lock_view"
         android:layout_width="280.0dip"
         android:layout_height="280.0dip"

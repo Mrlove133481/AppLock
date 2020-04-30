@@ -52,7 +52,7 @@
     </RelativeLayout>
 
     <!--图形锁-->
-    <com.lzx.lock.widget.LockPatternView
+    <com.mrlove.lock.widget.LockPatternView
         android:id="@+id/lock_pattern_view"
         android:layout_width="290dp"
         android:layout_height="290dp"

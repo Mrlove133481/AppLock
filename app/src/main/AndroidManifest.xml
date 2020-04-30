@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:dist="http://schemas.android.com/apk/distribution"
-    package="com.lzx.lock">
+    package="com.mrlove.lock">
 
     <!--应用锁需要的权限-->
     <uses-permission android:name="android.permission.GET_TASKS"/>
