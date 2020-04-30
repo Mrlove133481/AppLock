@@ -7,7 +7,7 @@ import android.os.Parcelable;
 import org.litepal.crud.DataSupport;
 
 /**
- * Created by xian on 2017/2/17.
+ * Created by Mrlove
  */
 
 public class CommLockInfo extends DataSupport implements Parcelable {

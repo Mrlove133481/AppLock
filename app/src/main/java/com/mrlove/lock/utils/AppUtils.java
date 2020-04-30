@@ -4,7 +4,7 @@ import android.view.Window;
 import android.view.WindowManager;
 
 /**
- * Created by xian on 2017/2/17.
+ * Created by Mrlove
  */
 
 public class AppUtils {

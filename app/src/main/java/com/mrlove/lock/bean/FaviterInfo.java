@@ -3,7 +3,7 @@ package com.mrlove.lock.bean;
 import org.litepal.crud.DataSupport;
 
 /**
- * Created by xian on 2017/2/17.
+ * Created by Mrlove
  *推荐加锁的应用信息
  */
 

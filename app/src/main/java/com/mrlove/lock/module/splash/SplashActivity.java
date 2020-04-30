@@ -22,7 +22,7 @@ import com.mrlove.lock.utils.ToastUtil;
 import com.mrlove.lock.widget.DialogPermission;
 
 /**
- * Created by xian on 2017/2/17.
+ * Created by Mrlove
  */
 
 public class SplashActivity extends BaseActivity {

@@ -6,7 +6,7 @@ import android.content.Context;
 import com.mrlove.lock.biometricprompt.fingerprint.bean.VerificationDialogStyleBean;
 
 /**
- * Created by ZuoHailong on 2019/7/9.
+ * Created by Mrlove
  */
 public interface IFingerprint {
 

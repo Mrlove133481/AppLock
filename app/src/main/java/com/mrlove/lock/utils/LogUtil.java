@@ -3,7 +3,7 @@ package com.mrlove.lock.utils;
 import android.util.Log;
 
 /**
- * Created by xian on 2017/2/17.
+ * Created by Mrlove
  */
 
 public class LogUtil {

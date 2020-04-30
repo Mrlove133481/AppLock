@@ -1,7 +1,7 @@
 package com.mrlove.lock.base;
 
 /**
- * Created by xian on 2017/2/17.
+ * Created by Mrlove
  */
 
 public class AppConstants {

@@ -19,7 +19,7 @@ import static com.mrlove.lock.bean.LockStage.Introduction;
 import static com.mrlove.lock.bean.LockStage.NeedToConfirm;
 
 /**
- * Created by xian on 2017/2/17.
+ * Created by Mrlove
  */
 
 public class GestureCreatePresenter implements GestureCreateContract.Presenter {

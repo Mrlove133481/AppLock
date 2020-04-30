@@ -13,11 +13,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.mrlove.lock.R;
-import com.mrlove.lock.module.about.AboutMeActivity;
-import com.mrlove.lock.module.lock.GestureCreateActivity;
-import com.mrlove.lock.base.BaseActivity;
 import com.mrlove.lock.base.AppConstants;
+import com.mrlove.lock.base.BaseActivity;
 import com.mrlove.lock.bean.LockAutoTime;
+import com.mrlove.lock.module.lock.GestureCreateActivity;
 import com.mrlove.lock.service.LockService;
 import com.mrlove.lock.utils.SpUtil;
 import com.mrlove.lock.utils.SystemBarHelper;
@@ -26,7 +25,7 @@ import com.mrlove.lock.widget.SelectLockTimeDialog;
 
 
 /**
- * Created by xian on 2017/2/17.
+ * Created by Mrlove
  */
 
 public class LockSettingActivity extends BaseActivity implements View.OnClickListener

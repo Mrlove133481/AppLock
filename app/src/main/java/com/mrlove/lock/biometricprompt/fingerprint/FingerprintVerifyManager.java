@@ -9,7 +9,7 @@ import com.mrlove.lock.biometricprompt.fingerprint.bean.VerificationDialogStyleB
 import com.mrlove.lock.biometricprompt.uitls.AndrVersionUtil;
 
 /**
- * Created by ZuoHailong on 2019/7/9.
+ * Created by Mrlove
  */
 public class FingerprintVerifyManager {
 

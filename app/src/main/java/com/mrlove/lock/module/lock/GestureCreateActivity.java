@@ -19,7 +19,7 @@ import com.mrlove.lock.widget.LockPatternViewPattern;
 import java.util.List;
 
 /**
- * Created by xian on 2017/2/17.
+ * Created by Mrlove
  */
 
 public class GestureCreateActivity extends BaseActivity implements View.OnClickListener, GestureCreateContract.View {

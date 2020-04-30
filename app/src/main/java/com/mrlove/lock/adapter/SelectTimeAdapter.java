@@ -14,7 +14,7 @@ import com.mrlove.lock.bean.LockAutoTime;
 import java.util.List;
 
 /**
- * Created by xian on 2017/2/17.
+ * Created by Mrlove
  */
 
 public class SelectTimeAdapter extends RecyclerView.Adapter<SelectTimeAdapter.ViewHolder> {
