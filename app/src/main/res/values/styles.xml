@@ -70,4 +70,5 @@
         <item name="android:backgroundDimAmount">0.4</item>
         <item name="android:windowCloseOnTouchOutside">false</item>
     </style>
+
 </resources>

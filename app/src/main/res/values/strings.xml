@@ -47,7 +47,19 @@
         <item>30 分钟</item>
         <item>立即</item>
     </string-array>
-
-    <string name="dialog_tip">你的系统大于等于5.0，我们需要获取 “查看应用使用情况” 权限
-    </string>
+    <string name="dialog_tip">你的系统大于等于5.0，我们需要获取 “查看应用使用情况” 权限</string>
+    <string name="fingerprint_recognition">指纹识别</string>
+    <string name="fingerprint_cancel">取消指纹识别</string>
+    <string name="fingerprint_usepwd">密码验证</string>
+    <string name="biometricprompt_finger_add">请先添加指纹</string>
+    <string name="biometricprompt_finger_add_confirm">确认添加</string>
+    <string name="biometricprompt_finger_hw_unavailable">指纹模块不可用</string>
+    <string name="biometricprompt_tip">提&#160;示</string>
+    <string name="biometricprompt_fingerprint_verification">指纹验证</string>
+    <string name="biometricprompt_verify_fingerprint">请验证您的指纹</string>
+    <string name="biometricprompt_verify_usepwd">密码验证</string>
+    <string name="biometricprompt_verify_success">验证成功</string>
+    <string name="biometricprompt_verify_failed">验证失败</string>
+    <string name="biometricprompt_verify_error_no_hardware">此设备不支持指纹识别</string>
+    <string name="biometricprompt_cancel">取消指纹验证</string>
 </resources>

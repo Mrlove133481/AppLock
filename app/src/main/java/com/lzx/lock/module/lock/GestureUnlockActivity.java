@@ -1,7 +1,9 @@
 package com.lzx.lock.module.lock;
 
+import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ApplicationInfo;
@@ -9,15 +11,22 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.core.content.ContextCompat;
 
 import com.lzx.lock.R;
 import com.lzx.lock.base.BaseActivity;
 import com.lzx.lock.base.AppConstants;
+import com.lzx.lock.biometricprompt.fingerprint.FingerprintCallback;
+import com.lzx.lock.biometricprompt.fingerprint.FingerprintVerifyManager;
 import com.lzx.lock.db.CommLockInfoManager;
 import com.lzx.lock.module.main.MainActivity;
 import com.lzx.lock.service.LockService;
@@ -37,6 +46,7 @@ import java.util.List;
 
 public class GestureUnlockActivity extends BaseActivity implements View.OnClickListener {
 
+    private static final String TAG = "Mrlove";
     private ImageView mIconMore;
     private LockPatternView mLockPatternView;
     private ImageView mUnLockIcon, mBgLayout, mAppLogo;
@@ -101,7 +111,64 @@ public class GestureUnlockActivity extends BaseActivity implements View.OnClickL
         filter.addAction(FINISH_UNLOCK_THIS_APP);
         registerReceiver(mGestureUnlockReceiver, filter);
 
+        zhiWen();
+
+
     }
+
+    private void zhiWen(){
+        FingerprintVerifyManager.Builder builder = new FingerprintVerifyManager.Builder(GestureUnlockActivity.this);
+        builder.callback(fingerprintCallback)
+                .fingerprintColor(ContextCompat.getColor(GestureUnlockActivity.this, R.color.colorPrimary))
+                .build();
+    }
+
+    private FingerprintCallback fingerprintCallback = new FingerprintCallback() {
+        @Override
+        public void onSucceeded() {
+         //   Toast.makeText(GestureUnlockActivity.this, getString(R.string.biometricprompt_verify_success), Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
+        public void onFailed() {
+        //    Toast.makeText(GestureUnlockActivity.this, getString(R.string.biometricprompt_verify_failed), Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
+        public void onUsepwd() {
+        //    Toast.makeText(GestureUnlockActivity.this, getString(R.string.fingerprint_usepwd), Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
+        public void onCancel() {
+        //    Toast.makeText(GestureUnlockActivity.this, getString(R.string.fingerprint_cancel), Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
+        public void onHwUnavailable() {
+        //    Toast.makeText(GestureUnlockActivity.this, getString(R.string.biometricprompt_finger_hw_unavailable), Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
+        public void onNoneEnrolled() {
+            //弹出提示框，跳转指纹添加页面
+            AlertDialog.Builder builder = new AlertDialog.Builder(GestureUnlockActivity.this);
+            builder.setTitle(getString(R.string.biometricprompt_tip))
+                    .setMessage(getString(R.string.biometricprompt_finger_add))
+                    .setCancelable(false)
+                    .setNegativeButton(getString(R.string.biometricprompt_finger_add_confirm), ((DialogInterface dialog, int which) -> {
+                        Intent intent = new Intent(Settings.ACTION_FINGERPRINT_ENROLL);
+                        startActivity(intent);
+                    }
+                    ))
+                    .setPositiveButton(getString(R.string.biometricprompt_cancel), ((DialogInterface dialog, int which) -> {
+                        dialog.dismiss();
+                    }
+                    ))
+                    .create().show();
+        }
+
+    };
 
     /**
      * 给应用Icon和背景赋值
@@ -146,8 +213,11 @@ public class GestureUnlockActivity extends BaseActivity implements View.OnClickL
             public void onPatternDetected(List<LockPatternView.Cell> pattern) {
                 if (mLockPatternUtils.checkPattern(pattern)) { //解锁成功,更改数据库状态
                     mLockPatternView.setDisplayMode(LockPatternView.DisplayMode.Correct);
+                    Log.d(TAG, "onPatternDetected: 解锁成功");
                     if (actionFrom.equals(AppConstants.LOCK_FROM_LOCK_MAIN_ACITVITY)) {
+                        Log.d(TAG, "onPatternDetected: 解锁成功if");
                         startActivity(new Intent(GestureUnlockActivity.this, MainActivity.class));
+                        Log.d(TAG, "onPatternDetected: 解锁成功跳");
                         finish();
                     } else {
                         SpUtil.getInstance().putLong(AppConstants.LOCK_CURR_MILLISENCONS, System.currentTimeMillis()); //记录解锁时间
