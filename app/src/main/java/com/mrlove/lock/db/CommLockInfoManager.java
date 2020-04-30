@@ -21,7 +21,7 @@ import java.util.List;
 import static org.litepal.crud.DataSupport.where;
 
 /**
- * Created by xian on 2017/2/17.
+ * Created by Mrlove
  */
 
 public class CommLockInfoManager {

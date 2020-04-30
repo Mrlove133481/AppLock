@@ -15,7 +15,7 @@ import com.mrlove.lock.R;
 import com.mrlove.lock.utils.SystemBarHelper;
 
 /**
- * Created by xian on 2017/2/17.
+ * Created by Mrlove
  */
 
 public abstract class BaseActivity extends AppCompatActivity {

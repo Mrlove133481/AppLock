@@ -20,7 +20,7 @@ import android.widget.ImageView;
 import com.mrlove.lock.R;
 
 /**
- * Created by xian on 2017/2/17.
+ * Created by Mrlove
  */
 
 public class CircleImageView extends ImageView {

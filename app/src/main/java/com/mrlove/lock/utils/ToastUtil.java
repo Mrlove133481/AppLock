@@ -5,7 +5,7 @@ import android.widget.Toast;
 import com.mrlove.lock.LockApplication;
 
 /**
- * Created by xian on 2017/2/17.
+ * Created by Mrlove
  */
 
 public class ToastUtil {

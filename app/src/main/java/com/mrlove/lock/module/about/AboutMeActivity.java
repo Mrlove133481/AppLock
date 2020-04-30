@@ -6,13 +6,14 @@ import com.mrlove.lock.R;
 import com.mrlove.lock.base.BaseActivity;
 
 /**
- * Created by xian on 2017/2/17.
+ * Created by Mrlove
  */
 
+/*
 public class AboutMeActivity extends BaseActivity {
     @Override
     public int getLayoutId() {
-        return R.layout.activity_about_me;
+     //   return R.layout.activity_about_me;
     }
 
     @Override
@@ -30,3 +31,4 @@ public class AboutMeActivity extends BaseActivity {
 
     }
 }
+*/

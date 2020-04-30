@@ -3,7 +3,7 @@ package  com.mrlove.lock.biometricprompt.uitls;
 import android.os.Build;
 
 /**
- * Created by ZuoHailong on 2019/7/9.
+ * Created by Mrlove
  */
 public class AndrVersionUtil {
     /**

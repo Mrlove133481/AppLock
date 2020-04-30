@@ -14,6 +14,7 @@ import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 
 /**
+ * Created by Mrlove
  * 加密类，用于判定指纹合法性
  */
 @RequiresApi(Build.VERSION_CODES.M)

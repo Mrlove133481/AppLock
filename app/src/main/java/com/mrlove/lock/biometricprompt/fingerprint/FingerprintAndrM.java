@@ -19,7 +19,7 @@ import com.mrlove.lock.utils.SpUtil;
 
 /**
  * Android M == 6.0
- * Created by ZuoHailong on 2019/7/9.
+ * Created by Mrlove
  */
 @RequiresApi(api = Build.VERSION_CODES.M)
 public class FingerprintAndrM implements IFingerprint {

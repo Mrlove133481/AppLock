@@ -20,7 +20,7 @@ import com.mrlove.lock.R;
 import com.mrlove.lock.biometricprompt.fingerprint.bean.VerificationDialogStyleBean;
 
 /**
- * Created by ZuoHailong on 2019/3/12.
+ *Created by Mrlove
  */
 public class FingerprintDialog extends DialogFragment {
 

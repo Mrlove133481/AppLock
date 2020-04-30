@@ -19,7 +19,7 @@ import java.util.List;
 
 /**
  * 后台加载应用列表
- * Created by xian on 2017/2/17.
+ * Created by Mrlove
  */
 
 public class LoadAppListService extends IntentService {

@@ -12,7 +12,7 @@ import com.mrlove.lock.utils.SpUtil;
 
 /**
  * 开机启动广播
- * Created by xian on 2017/3/4.
+ * Created by Mrlove
  */
 
 public class BootBroadcastReceiver extends BroadcastReceiver {

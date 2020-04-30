@@ -13,7 +13,7 @@ import android.view.WindowManager;
 import com.mrlove.lock.R;
 
 /**
- * Created by xian on 2017/2/17.
+ * Created by Mrlove
  */
 
 public abstract class BaseDialog extends Dialog {

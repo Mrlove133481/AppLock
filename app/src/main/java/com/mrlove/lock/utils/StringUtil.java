@@ -4,7 +4,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * Created by xian on 2017/2/17.
+ * Created by Mrlove
  */
 
 public class StringUtil {

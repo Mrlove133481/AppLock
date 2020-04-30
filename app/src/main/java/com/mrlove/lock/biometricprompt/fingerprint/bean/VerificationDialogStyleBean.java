@@ -2,7 +2,7 @@ package com.mrlove.lock.biometricprompt.fingerprint.bean;
 
 /**
  * 验证窗口的样式
- * Created by ZuoHailong on 2019/7/9.
+ * Created by Mrlove
  */
 public class VerificationDialogStyleBean {
 
