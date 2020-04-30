@@ -4,16 +4,5 @@ package com.mrlove.lock;
  *
  * */
 public  abstract class Factory{
-    public static Product createProduct(String type){
-     Product product = null;
-     switch (type){
-         case "A":
-             product = new ConcreteProductA();
-             break;
-         case "B":
-             product = new ConcreteProductB();
-             break;
-     }
-     return product;
-    }
+    public abstract <T extends Product> T createProduct(Class<T> mproduct);
 }
